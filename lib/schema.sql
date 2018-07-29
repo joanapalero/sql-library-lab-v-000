@@ -2,7 +2,7 @@ CREATE TABLE series (
   id INTEGER PRIMARY KEY,
   title TEXT,
   author_id INTEGER,
-  subgenre_id INTEGER,
+  subgenre_id INTEGER
 );
 
 CREATE TABLE subgenres (
@@ -15,6 +15,7 @@ CREATE TABLE authors (
   name TEXT
 );
 
+
 CREATE TABLE books (
   id INTEGER PRIMARY KEY,
   title TEXT,
@@ -22,14 +23,16 @@ CREATE TABLE books (
   series_id INTEGER
 );
 
+
 CREATE TABLE characters (
   id INTEGER PRIMARY KEY,
   name TEXT,
-  motto TEXT,
   species TEXT,
-  author_id INTEGER,
-  series_id INTEGER
+  motto TEXT, 
+  series_id INTEGER,
+  author_id INTEGER
 );
+
 
 CREATE TABLE character_books (
   id INTEGER PRIMARY KEY,
